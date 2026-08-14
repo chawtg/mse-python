@@ -22,26 +22,6 @@ This is a Python Command-Line Interface (CLI) application that calculates a user
 
 No external Python packages are required.
 
-## How to Run
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-2. Navigate to the project directory:
-
-```bash
-cd bmi-calculator
-```
-
-3. Run the program:
-
-```bash
-python fibonacci-factorial-calculator.py
-```
-
 ## Example
 
 ```text

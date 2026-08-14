@@ -13,25 +13,6 @@ This is a Python Command-Line Interface (CLI) application that prompts the user 
 
 No external Python packages are required.
 
-## How to Run
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-2. Navigate to the project directory:
-
-```bash
-cd python-fibonacci-factorial
-```
-
-3. Run the program:
-
-```bash
-python main.py
-```
 
 ## Example
 
