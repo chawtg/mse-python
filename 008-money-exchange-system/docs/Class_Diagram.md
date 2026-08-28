@@ -8,9 +8,8 @@ The class diagram will focus on the **domain model** of the Money Exchange Syste
 
 ---
 
-# 2. Main Class Diagram — Money Exchange System
 
-## Purpose
+## 2. Purpose
 
 The class diagram represents the overall structure of the Money Exchange System and supports all use cases defined in the Use Case Diagram.
 
@@ -31,7 +30,7 @@ The class diagram represents the overall structure of the Money Exchange System 
 
 ---
 
-## 4. Mermaid Class Diagram
+## 4. Class Diagram
 
 ```mermaid
 classDiagram
