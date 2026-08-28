@@ -6,12 +6,6 @@ A single class diagram is sufficient because the system is relatively small and 
 
 The class diagram will focus on the **domain model** of the Money Exchange System.
 
-### Number of Class Diagrams
-
-**1 Class Diagram — Money Exchange System**
-
-The diagram covers both User and Admin functionality and the relationships between the core classes.
-
 ---
 
 # 2. Main Class Diagram — Money Exchange System
@@ -20,20 +14,6 @@ The diagram covers both User and Admin functionality and the relationships betwe
 
 The class diagram represents the overall structure of the Money Exchange System and supports all use cases defined in the Use Case Diagram.
 
-It covers:
-
-* User account and profile management
-* Admin management of users
-* Currency management
-* Exchange rate management
-* Currency exchange requests
-* Funding card information
-* Exchange request processing
-* Optional verification documents
-* Transaction history
-* Report generation
-
----
 
 ## 3. Main Classes
 
@@ -541,109 +521,8 @@ NZD → USD = 0.5900
 
 ---
 
-# 7. Representation of Include Relationships
 
-The following use case relationship exists:
-
-```text
-Request Exchange Money
-        |
-     «include»
-        ↓
-Add Card Information
-```
-
-The class diagram does **not** create an `AddCardInformation` class.
-
-Instead, the domain object affected by this use case is:
-
-```text
-CardInformation
-```
-
-and the relationship is:
-
-```text
-Transaction "1" --> "1" CardInformation
-```
-
-This keeps the class diagram focused on domain objects rather than use-case names.
-
----
-
-# 8. Representation of Process Exchange Request
-
-The Use Case Diagram contains:
-
-```text
-Process Exchange Request
-        |
-        +── «include» Approve the Request
-        |
-        +── «include» Reject the Request
-```
-
-These are not modelled as separate classes.
-
-Instead, the `Transaction` class contains:
-
-```text
-status
-```
-
-with the following enumeration:
-
-```text
-TransactionStatus
-
-pending
-approved
-rejected
-```
-
-The relevant operations are:
-
-```text
-createRequest()
-approve()
-reject()
-```
-
-This avoids unnecessary classes while accurately representing the business rule.
-
----
-
-# 9. Representation of Extend Relationship
-
-The Use Case Diagram contains:
-
-```text
-Request Additional Document
-            |
-         «extend»
-            ↓
-      Register Account
-```
-
-Because the request for additional documentation is conditional, the class diagram represents it using an optional relationship:
-
-```text
-User "1" --> "0..*" VerificationDocument
-```
-
-A User does not necessarily need a verification document.
-
-Therefore:
-
-```text
-0..*
-```
-
-appropriately represents zero or more documents.
-
----
-
-# 10. Use Case to Class Mapping
+# 7. Use Case to Class Mapping
 
 | Use Case                    | Main Class(es)                                                       |
 | --------------------------- | -------------------------------------------------------------------- |
